@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
+
 **👇Click for video**
 [![Demo](https://img.youtube.com/vi/408mvE4vbhM/0.jpg)](https://youtu.be/408mvE4vbhM)
 
@@ -11,6 +12,7 @@
 
 - [About the project](#About-the-project)
 - [Installation](#Installation)
+- [Tests](#Tests)
 - [Schema](#Schema)
 - [Seed](#Seed)
 - [License](#License)
@@ -21,10 +23,17 @@
  A database built in **MySQL** using inquirer npm package, node for the user to manage the company's employees.
 
 ## Installation
-In your terminal run 
+Run the following command in your terminal 
 `npm start`
 
-
+## Tests
+Run the following command in your terminal
+* `mysql -u root -p`
+    * Enter your password to your MySql Workbench
+* `source schema.sql`
+* `source seed.sql`
+>To exit mysql environment just type
+`exit`
 ## Schema
 
 * **department**:
