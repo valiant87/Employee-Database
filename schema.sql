@@ -3,7 +3,7 @@ CREATE database employees_DB;
 
 USE employees_DB;
 
-CREATE TABLE departament (
+CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,
     PRIMARY KEY (id)
@@ -13,9 +13,9 @@ CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL(10, 4) NOT NULL,
-    departament_id INT NOT NULL,
+    department_id INT NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (departament_id) REFERENCES departament(id) ON DELETE CASCADE
+    FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
 );
 
 CREATE TABLE employee (
@@ -26,6 +26,5 @@ CREATE TABLE employee (
     manager_id INT,
         PRIMARY KEY (id),
         FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE,
-        FOREIGN KEY (manager_id) REFERENCES employee(id)
-
+        FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
 );

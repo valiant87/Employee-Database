@@ -1,7 +1,7 @@
-INSERT INTO departament (name)
+INSERT INTO department (name)
 VALUES ("Management"), ("IT"), ("Sales");
 
-INSERT INTO role (tile, salary, departament_id)
+INSERT INTO role (title, salary, department_id)
 VALUES("Manager", "125000.00","1"), ("Senior Developer", "110000.00", "2"), ("System Administrator", "90000.00", "3"), ("Product Development", "65100.00", "1"), ("Junior Developer", "85000.00", "2"), ("Inter", "45000.00", "3");
 
 INSERT INTO employee (first_name, last_name, role_id)
