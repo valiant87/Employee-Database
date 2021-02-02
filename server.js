@@ -306,13 +306,12 @@ function removeRole() {
             }
             return object
         });
-        inquirer
-            .prompt({
-                name: "delete",
-                type: "list",
-                message: "Choose an department to delete",
-                choices: array1
-            })
+        inquirer.prompt({
+            name: "delete",
+            type: "list",
+            message: "Choose an department to delete",
+            choices: array1
+        })
             .then(function (response) {
                 connection.query("DELETE FROM role WHERE id=?;", [response.delete], function (err, res) {
                     if (err) throw err;
